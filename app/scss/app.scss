@@ -50,6 +50,15 @@ main {
     height: auto;
     display: flex;
     flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    @media (min-width: 1281px) {
+      justify-content: space-between;
+    }
 
     .chart-container {
       margin: 0 auto;
@@ -64,34 +73,160 @@ main {
         width: 400px;
         height: 280px;
       }
+      @media (min-width: 481px) and (max-width: 650px) {
+        width: 450px;
+        height: 320px;
+      }
+      @media (min-width: 651px) and (max-width: 767px) {
+        width: 600px;
+        height: 320px;
+      }
+      @media (min-width: 768px) {
+        margin: 0;
+      }
+      @media (min-width: 768px) and (max-width: 1024px) {
+        width: 360px;
+        height: 300px;
+      }
+      @media (min-width: 1025px) and (max-width: 1280px) {
+        width: 550px;
+        height: 350px;
+      }
+      @media (min-width: 1281px) and (max-width: 1500px){
+        width: 750px;
+        height: 450px;
+      }
+      @media (min-width: 1501px) {
+        width: 950px;
+        height: 650px;
+      }
     }
     .text-container {
-      width: 100%;
+      width: auto;
       height: auto;
+      @media (min-width: 768px) {
+        border: 1px solid $blue;
+        border-radius: 25px 25px;
+      }
+      @media (min-width: 768px) and (max-width: 1024px) {
+        padding: 10px;
+      }
+      @media (min-width: 1025px) and (max-width: 1280px) {
+        padding: 15px;
+      }
+      @media (min-width: 1281px) and (max-width: 1500px){
+        padding: 20px;
+      }
+      @media (min-width: 1501px) {
+        padding: 30px;
+      }
+      
+      @media (min-width: 1281px) {
+        margin: 0 auto;
+      }
       .btcprice {
         width: 300px;
         margin: 0 auto;
+        @media (min-width: 481px) and (max-width: 650px) {
+          width: 450px
+        }
+        @media (min-width: 651px) and (max-width: 767px) {
+          width: 600px;
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+          width: 400px;
+        }
+        @media (min-width: 1025px) {
+          width: 450px;
+        }
+        
         h2 {
           font-size: 2rem;
           font-weight: 400;
           padding: 10px;
+          @media (min-width: 481px) and (max-width: 650px) {
+            font-size: 2.3rem;
+          }
+          @media (min-width: 651px) and (max-width: 767px) {
+            font-size: 2.6rem;
+          }
+          @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 2.2rem;
+          }
+          @media (min-width: 1025px) and (max-width: 1280px) {
+            font-size: 2.5rem;
+          }
+          @media (min-width: 1281px) and (max-width: 1500px){
+            font-size: 2.8rem;
+          }
+          @media (min-width: 1501px) {
+            font-size: 3rem;
+          }
         }
       }
       .wallet {
         width: 300px;
         margin: 0 auto;
+        @media (min-width: 481px) and (max-width: 650px) {
+          width: 450px
+        }
+        @media (min-width: 651px) and (max-width: 767px) {
+          width: 600px;
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+          width: 400px;
+        }
+        @media (min-width: 1025px) {
+          width: 450px;
+        }
         h2 {
           color: $black;
-          font-size: 1.7rem;
+          font-size: 2.4rem;
           font-weight: 400;
           text-align: center;
           margin-bottom: 10px;
+          @media (min-width: 481px) and (max-width: 650px) {
+            font-size: 2.8rem;
+          }
+          @media (min-width: 651px) and (max-width: 767px) {
+            font-size: 3.2rem;
+          }
+          @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 2.4rem;
+          }
+          @media (min-width: 1025px) and (max-width: 1280px) {
+            font-size: 2.7rem;
+          }
+          @media (min-width: 1281px) and (max-width: 1500px){
+            font-size: 3rem;
+          }
+          @media (min-width: 1501px) {
+            font-size: 3.2rem;
+          }
         }
         h3 {
           color: $black;
           font-weight: 300;
           font-size: 1.5rem;
           padding-left: 10px;
+          @media (min-width: 481px) and (max-width: 650px) {
+            font-size: 2rem;
+          }
+          @media (min-width: 651px) and (max-width: 767px) {
+            font-size: 2.3rem;
+          }
+          @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 2rem;
+          }
+          @media (min-width: 1025px) and (max-width: 1280px) {
+            font-size: 2.2rem;
+          }
+          @media (min-width: 1281px) and (max-width: 1500px){
+            font-size: 2.4rem;
+          }
+          @media (min-width: 1501px) {
+            font-size: 2.5rem;
+          }
         }
       }
       .inputs {
@@ -103,6 +238,18 @@ main {
         flex-direction: column;
         @media (min-width: 320px) and (max-width: 350px) {
           width: 320px;
+        }
+        @media (min-width: 481px) and (max-width: 650px) {
+          width: 450px
+        }
+        @media (min-width: 651px) and (max-width: 767px) {
+          width: 600px;
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+          width: 400px;
+        }
+        @media (min-width: 1025px) {
+          width: 450px;
         }
         .buy {
           margin-bottom: 5px;
@@ -121,6 +268,21 @@ main {
             font-size: 1.1rem;
             width: 200px;
           }
+          @media (min-width: 481px) and (max-width: 650px) {
+            width: 250px;
+            height: 50px;
+            font-size: 1.3rem;
+          }
+          @media (min-width: 651px) and (max-width: 767px) {
+            width: 300px;
+            font-size: 1.3rem;
+            height: 50px;
+          }
+          @media (min-width: 1501px) {
+            width: 280px;
+            height: 52px;
+            font-size: 1.4rem;
+          }
         }
         button {
           width: 70px;
@@ -132,6 +294,21 @@ main {
           color: $blue;
           font-size: 1rem;
           line-height: 40px;
+          @media (min-width: 481px) and (max-width: 650px) {
+            width: 80px;
+            height: 50px;
+            font-size: 1.3rem;
+          }
+          @media (min-width: 651px) and (max-width: 767px) {
+            width: 80px;
+            height: 50px;
+            font-size: 1.3rem;
+          }
+          @media (min-width: 1501px) {
+            height: 52px;
+            width: 80px;
+            font-size: 1.3rem;
+          }
         }
       }
     }
