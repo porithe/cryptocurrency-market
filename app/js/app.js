@@ -14,7 +14,7 @@ const minBtc = document.getElementById('min-btc-tag');
 const maxBtc = document.getElementById('max-btc-tag');
 
 let labelsUpper = 1;
-let bitcoinStartValue  = 7500;
+let bitcoinStartValue = 0;
 
 let userMoney = 1500;
 let userBitcoin = 0;
@@ -22,11 +22,23 @@ let userBitcoin = 0;
 let minBtcPrice = bitcoinStartValue;
 let maxBtcPrice = bitcoinStartValue;
 
-bitcoinTag.textContent = bitcoinStartValue;
+
+fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
+  .then(resp => resp.json())
+  .then(resp => {
+    bitcoinStartValue = resp.bpi.USD.rate_float;
+    bitcoinStartValue = Math.floor(bitcoinStartValue);
+    bitcoinTag.textContent = bitcoinStartValue;
+    minBtc.textContent = bitcoinStartValue;
+    maxBtc.textContent = bitcoinStartValue;
+    minBtcPrice = bitcoinStartValue;
+    maxBtcPrice = bitcoinStartValue;
+  })
+
+
 moneyTag.textContent = userMoney;
 userBtcTag.textContent = userBitcoin;
-minBtc.textContent = bitcoinStartValue;
-maxBtc.textContent = bitcoinStartValue;
+
 
 const myChart = new Chart(ctx, {
   type: 'line',
