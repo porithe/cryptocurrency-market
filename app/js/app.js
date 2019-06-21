@@ -33,6 +33,7 @@ fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
     maxBtc.textContent = bitcoinStartValue;
     minBtcPrice = bitcoinStartValue;
     maxBtcPrice = bitcoinStartValue;
+    myChart.data.datasets[0].data.push(bitcoinStartValue);
   })
 
 
@@ -45,7 +46,7 @@ const myChart = new Chart(ctx, {
   data: {
     labels: [labelsUpper],
     datasets: [{
-      data: [bitcoinStartValue],
+      data: [],
       backgroundColor: ['rgba(33,150,243 ,0.3)'],
       borderColor: ['rgba(33,150,243 ,1)'],
       borderWidth: 2,
