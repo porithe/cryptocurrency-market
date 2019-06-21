@@ -69,7 +69,7 @@ const myChart = new Chart(ctx, {
 
 const buyBitcoin = () => {
   if (buyInput.value <= userMoney) {
-    userBitcoin = userMoney / bitcoinStartValue;
+    userBitcoin += buyInput.value / bitcoinStartValue;
     userBitcoin = Math.round(userBitcoin * 1000) / 1000;
     userMoney -= buyInput.value;
     userMoney = Math.round(userMoney * 100) / 100;
@@ -77,10 +77,13 @@ const buyBitcoin = () => {
     userBtcTag.textContent = userBitcoin;
     buyInput.value = '';
   }
+  else {
+    buyInput.classList.add("wrong-inp");
+  }
 }
 const sellBitcoin = () => {
   if (sellInput.value <= userBitcoin) {
-    userMoney = userBitcoin * bitcoinStartValue;
+    userMoney += sellInput.value * bitcoinStartValue;
     userBitcoin = userBitcoin - sellInput.value;
     userBitcoin = Math.round(userBitcoin * 1000) / 1000;
     userMoney = Math.round(userMoney * 100) / 100;
@@ -88,7 +91,26 @@ const sellBitcoin = () => {
     userBtcTag.textContent = userBitcoin;
     sellInput.value = '';
   }
+  else {
+    sellInput.classList.add("wrong-inp");
+  }
 }
+const formWalidationBuy = () => {
+  buyInput.classList.forEach( item => {
+    if (item === 'wrong-inp') {
+      buyInput.classList.remove('wrong-inp');
+    }
+  });
+}
+const formWalidationSell = () => {
+  sellInput.classList.forEach( item => {
+    if (item === 'wrong-inp') {
+      sellInput.classList.remove('wrong-inp');
+    }
+  });
+}
+buyInput.addEventListener('click', formWalidationBuy);
+sellInput.addEventListener('click', formWalidationSell);
 buyButton.addEventListener('click', buyBitcoin);
 sellButton.addEventListener('click', sellBitcoin);
 

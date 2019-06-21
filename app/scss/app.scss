@@ -310,6 +310,10 @@ main {
             font-size: 1.4rem;
           }
         }
+        .wrong-inp {
+          border: 1px solid $red !important;
+          box-shadow: 0 0 3px 0 $red;
+        }
         button {
           width: 70px;
           height: 40px;
