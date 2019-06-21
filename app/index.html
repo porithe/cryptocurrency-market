@@ -22,22 +22,24 @@
       <div class="text-container">
         <div class="btcprice">
           <h2>BTC: <span id="btc-tag"></span>$</h2>
+          <h3>MIN: <span id="min-btc-tag"></span>$</h3>
+          <h3>MAX: <span id="max-btc-tag"></span>$</h3>
         </div>
   
         <div class="wallet">
           <h2>Wallet</h2>
-          <h3>Money: 1200$</h3>
-          <h3>BTC: 0.38</h3>
+          <h3>Money: <span id="money-tag"></span>$</h3>
+          <h3>BTC: <span id="btc-user-tag"></span></h3>
         </div>
   
         <div class="inputs">
           <div class="buy">
-              <input class="inp" type="text" placeholder="750$">
-              <button>BUY</button>
+              <input id="buyInput" class="inp" type="text" placeholder="750$">
+              <button id="buyButton">BUY</button>
           </div>
           <div class="sell">
-              <input class="inp" type="text" placeholder="0.5 BTC">
-              <button>SELL</button>
+              <input id="sellInput" class="inp" type="text" placeholder="0.5 BTC">
+              <button id="sellButton">SELL</button>
           </div>
         </div>
       </div>
