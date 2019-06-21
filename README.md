@@ -4,7 +4,7 @@ Cryptocurrency market game made in VanillaJS
 
 ## Getting Started
 
-Live demo: https://5d0c9f41f1d893467d5c643a--gifted-allen-d706c2.netlify.com/
+Live demo: https://gifted-allen-d706c2.netlify.com/
 
 ## Informations
 
