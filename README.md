@@ -8,7 +8,7 @@ Live demo: https://gifted-allen-d706c2.netlify.com/
 
 ## Informations
 
-Clean JS, bitcoin from api.
+Mini game made in clean JavaScript. Bitcoin price from API.
 
 ## Stack
 
